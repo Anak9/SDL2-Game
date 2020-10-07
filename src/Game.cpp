@@ -2,6 +2,8 @@
 
 SDL_Texture* playerTexture;
 
+SDL_Rect sourceRec, destinationRec;
+
 Game::Game()
 {}
 
@@ -44,6 +46,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     }
 
 
+    SDL_Surface* temporarySurface = IMG_Load ("assets/player.png");
+    playerTexture = SDL_CreateTextureFromSurface (renderer, temporarySurface);
+    SDL_FreeSurface(temporarySurface);
+
 }
 
 void Game::handleEvents()
@@ -65,6 +71,11 @@ void Game::handleEvents()
 void Game::update()
 {
     this->counter++;
+
+    destinationRec.h = 64;
+    destinationRec.w = 64;
+    destinationRec.x = counter;
+
     std::cout << "counter: " << this->counter << std::endl;
 }
 
@@ -74,6 +85,9 @@ void Game::render()
 
     ///this is where we would add stuff to render
 
+    ///the first null is the parameter for source rectangle (the part of the rectangle-image-that you want to draw) - if is null, uses the entire image
+    ///the second is the destination rectangle (where you want to draw on the screen)
+    SDL_RenderCopy (renderer, playerTexture, NULL, &destinationRec);
 
     SDL_RenderPresent(this->renderer);
 }

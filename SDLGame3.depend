@@ -2,9 +2,10 @@
 1602007887 source:c:\users\sarah\desktop\nova pasta\sdlgame3\src\game.cpp
 	"Game.h"
 
-1602007796 c:\users\sarah\desktop\nova pasta\sdlgame3\include\game.h
+1602010022 c:\users\sarah\desktop\nova pasta\sdlgame3\include\game.h
 	<iostream>
-	<SDL2/SDL.h>
+	<SDL.h>
+	<SDL_image.h>
 
 1583890677 c:\users\sarah\desktop\sdl\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -360,7 +361,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1602008081 source:c:\users\sarah\desktop\nova pasta\sdlgame3\main.cpp
+1602010445 source:c:\users\sarah\desktop\nova pasta\sdlgame3\main.cpp
 	<iostream>
-	<SDL2/SDL.h>
+	"Game.h"
+
+1561870368 c:\users\sarah\desktop\sdl\sdl2_image\include\sdl2\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
 

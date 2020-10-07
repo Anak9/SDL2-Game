@@ -2,7 +2,8 @@
 #define GAME_H
 
 #include <iostream>
-#include <SDL2/SDL.h>
+#include <SDL.h>
+#include <SDL_image.h>
 
 
 class Game
